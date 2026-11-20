@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  stars-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram_stars_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Хранение базы данных SQLite между перезапусками контейнера
+      - ./data:/app/data
+      # Монтирование директории логов
+      - ./logs:/app/logs

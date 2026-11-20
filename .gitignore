@@ -1,0 +1,28 @@
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Переменные окружения и секреты
+.env
+.env.local
+
+# Базы данных
+*.db
+*.sqlite
+*.sqlite3
+test_*.db
+data/
+
+# Логи
+logs/
+*.log
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Тестовые скрипты
+test_*.py
